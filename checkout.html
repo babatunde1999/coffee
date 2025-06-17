@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+      <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+ <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .checkout-container {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+    .btn-coffee {
+      background-color: #6f4e37;
+      color: #fff;
+    }
+    .btn-coffee:hover {
+      background-color: #5c3e2e;
+    }
+  </style>
+</head>
+<body>
+
+    
+<div class="container checkout-container">
+  <h3 class="mb-4">Checkout</h3>
+  <div class="row">
+    <!-- Billing Info -->
+    <div class="col-md-6">
+      <h5>Billing Details</h5>
+      <form>
+        <div class="mb-3">
+          <label for="fullname" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullname" placeholder="John Doe" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" placeholder="email@example.com" required />
+        </div>
+        <div class="mb-3">
+          <label for="address" class="form-label">Address</label>
+          <input type="text" class="form-control" id="address" placeholder="123 Coffee St" required />
+        </div>
+        <div class="mb-3">
+          <label for="city" class="form-label">City</label>
+          <input type="text" class="form-control" id="city" required />
+        </div>
+        <div class="mb-3">
+          <label for="zip" class="form-label">ZIP / Postal Code</label>
+          <input type="text" class="form-control" id="zip" required />
+        </div>
+      </form>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="col-md-6">
+      <h5>Order Summary</h5>
+      <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between">
+          <div>
+            <h6 class="my-0">Espresso Coffee</h6>
+            <small class="text-muted">Qty: 2</small>
+          </div>
+          <span class="text-muted">$10</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <div>
+            <h6 class="my-0">Coffee Beans</h6>
+            <small class="text-muted">Qty: 1</small>
+          </div>
+          <span class="text-muted">$15</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <strong>Total</strong>
+          <strong>$25</strong>
+        </li>
+      </ul>
+
+      <!-- Payment method -->
+      <h5>Payment</h5>
+      <form>
+        <div class="mb-3">
+          <label for="cardNumber" class="form-label">Card Number</label>
+          <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" required />
+        </div>
+        <div class="mb-3">
+          <label for="cardName" class="form-label">Cardholder Name</label>
+          <input type="text" class="form-control" id="cardName" required />
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="expiry" class="form-label">Expiry</label>
+            <input type="text" class="form-control" id="expiry" placeholder="MM/YY" required />
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="cvv" class="form-label">CVV</label>
+            <input type="text" class="form-control" id="cvv" placeholder="123" required />
+          </div>
+        </div>
+        <div class="d-grid mt-4">
+          <button type="submit" class="btn btn-coffee">Place Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+    
+
+
+
+        
+<script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+  integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+  crossorigin="anonymous"
+></script>
+</body>
+</html>

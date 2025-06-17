@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAKERY</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+
+  <style>
+     body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f7f2eb;
+        color: #333;
+      }
+
+    .navbar {
+      background-color: white;
+    }
+
+    .navbar-brand, .nav-link {
+        color: black;
+    }
+
+    .navbar-nav{
+      gap: 5%;
+    }
+
+    .btn {
+        background-color: #6f4e37;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+
+    
+    .hero-bakery {
+      background: url("oven.jpg") center center/cover no-repeat;
+      height: 80vh;
+      position: relative;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-bakery::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+    .bakery-card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .behind{
+        background-color: white;
+        margin-top: 2rem;
+    }
+
+    .brewing{
+        margin-top: 2rem;
+    }
+
+    .footer {
+    background-color: #2c1c13;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: sans-serif;
+    margin-top: 50px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  .footer-column {
+    flex: 1 1 150px;
+    margin: 10px;
+  }
+
+  .footer-column h3,
+  .footer-column h4 {
+    margin-bottom: 10px;
+  }
+
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-column ul li {
+    margin: 5px 0;
+  }
+
+  .footer-column a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+
+  .footer-column a:hover {
+    color: #fff;
+  }
+
+  .social-media a {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+
+  .social-media a:hover {
+    color: #fff;
+  }
+  </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">COFFEE</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon bg-light"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+              <li class="nav-item"><a class="nav-link" href="coffee page.html">COFFEE</a></li>
+              <li class="nav-item"><a class="nav-link" href="Bakery Page.html">BAKERY</a></li>
+              <li class="nav-item"><a class="nav-link" href="shop page.html">SHOP</a></li>
+              <li class="nav-item"><a class="nav-link" href="login page.html">LOGIN</a></li>
+            </ul>
+           </div  class="col-md-3 text-end">
+        <i class="bi bi-search me-5"></i>
+      </div>
+          </div>
+       
+        </div>
+      </nav>
+    
+   
+    <section class="hero-bakery">
+      <div class="hero-content">
+        <h1 class="display-4">Fresh From the Oven</h1>
+        <p class="lead">Delicious baked goods made to pair perfectly with your favorite brew.</p>
+        <a href="shop page.html" class="btn btn-coffee text-white mt-3">Shop Bakery</a>
+      </div>
+    </section>
+    
+    
+<section class="brewing" id="brewing-guide">
+  <div class="container px-0">
+    <h2 class="text-center mb-5">Explore Our Bakery</h2>
+    <div class="row g-4">
+
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img src="pasteries.jpg" class="card-img-top" alt="Pastries">
+          <div class="card-body">
+            <h5 class="card-title">Pastries</h5>
+            <p class="card-text">From buttery croissants to flaky danish, our pastries are perfect with coffee.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img src="artisan.jpg" class="card-img-top" alt="Artisan Breads">
+          <div class="card-body">
+            <h5 class="card-title">Artisan Breads</h5>
+            <p class="card-text">Handmade loaves baked daily using the finest ingredients.</p>
+          </div>
+        </div>
+      </div>
+
+  
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img src="cake.jpg" class="card-img-top" alt="Cakes & Sweets">
+          <div class="card-body">
+            <h5 class="card-title">Cakes & Sweets</h5>
+            <p class="card-text">Celebrate every moment with our rich and flavorful cakes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm">
+          <img src="muffins.jpg" class="card-img-top" alt="Muffins">
+          <div class="card-body">
+            <h5 class="card-title">Muffins</h5>
+            <p class="card-text">Soft, moist, and packed with flavor and our muffins are a must-try.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--<div class="text-center mt-5">
+      <a href="brew-videos.html" class="btn btn-dark px-4 py-2">Watch Brewing Tutorials</a>
+    </div>-->
+  </div>
+
+</section>
+   
+    <div class="container">
+      <section class="behind py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Behind the Bake</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <p style="font-size: x-large;">Our bakers are passionate about creating artisan goods with love and tradition. Every item is made fresh using wholesome ingredients and classic techniques passed down through generations.
+              At the heart of our bakery is a passion for handmade goodness. Every loaf, croissant, and pastry begins with quality ingredients, traditional techniques,
+               and a touch of love. From early morning kneads to golden finishes, 
+              our bakers pour care into every batch. Behind the bakes is more than a kitchen—it's a story of craft, community, and the simple joy of sharing fresh, warm treats.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <img src="baking.jpg" class="img-fluid rounded" alt="Our Baking Process">
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    
+ 
+    <section class="text-center py-5">
+      <div class="container">
+        <h2>Ready to Taste the Difference?</h2>
+        <a href="#" class="btn btn-dark mt-3">Shop Now</a>
+      </div>
+    </section>
+      
+    
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>COFFEE</h3>
+      </div>
+  
+      <div class="footer-column">
+        <h4>PRIVACY</h4>
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h4>SERVICES</h4>
+        <ul>
+          <li><a href="#">Subscriptions</a></li>
+          <li><a href="#">Online Ordering</a></li>
+          <li><a href="#">Delivery</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h4>ABOUT US</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Meet the Team</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h4>INFORMATION</h4>
+        <ul>
+          <li><a href="">Plans & Pricing</a></li>
+          <li><a href="#">Best-Selling Products</a></li>
+          <li><a href="#">Jobs</a></li>
+        </ul>
+      </div>
+      
+   <div class="footer-column social-media">
+      <h4>SOCIAL MEDIA</h4>
+      <ul> 
+      <li><a href="#"><i class="fab fa-instagram">Instagram</i></a></li>
+      <li><a href=""><i class="fab fa-twitter">Tiktok</i></a></li>
+      <li><a href="#"><i class="fab fa-facebook">Facebook</i></a></li>
+     
+      </ul>
+    </div>
+    </div>
+  </footer>
+    
+
+
+
+
+
+
+
+
+
+
+
+   
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+      integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+      crossorigin="anonymous"
+    ></script> 
+</body>
+</html>

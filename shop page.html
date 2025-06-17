@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+<style>
+     body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f7f2eb;
+        color: #333;
+      }
+
+    .navbar {
+      background-color: white;
+    }
+
+    .navbar-brand, .nav-link {
+        color: black;
+    }
+
+    .navbar-nav{
+      gap: 5%;
+    }
+
+    .btn {
+        background-color: #6f4e37;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+
+    
+    .hero-bakery {
+      background: url("shop.jpg") center center/cover no-repeat;
+      height: 80vh;
+      position: relative;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-bakery::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+
+
+    .product-card img {
+      object-fit: cover;
+      height: 200px;
+    }
+    .product-card {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      transition: box-shadow 0.3s;
+    }
+    .product-card:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+      .footer {
+    background-color: #2c1c13;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: sans-serif;
+    margin-top: 50px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  .footer-column {
+    flex: 1 1 150px;
+    margin: 10px;
+  }
+
+  .footer-column h3,
+  .footer-column h4 {
+    margin-bottom: 10px;
+  }
+
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-column ul li {
+    margin: 5px 0;
+  }
+
+  .footer-column a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+
+  .footer-column a:hover {
+    color: #fff;
+  }
+
+  .social-media a {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+
+  .social-media a:hover {
+    color: #fff;
+  }
+  a{
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  </style>
+
+</head>
+
+<body>
+ 
+  
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">COFFEE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon bg-light"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="coffee page.html">COFFEE</a></li>
+          <li class="nav-item"><a class="nav-link" href="Bakery Page.html">BAKERY</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop page.html">SHOP</a></li>
+          <li class="nav-item"><a class="nav-link" href="login page.html">LOGIN</a></li>
+        </ul>
+      </div  class="col-md-3 text-end">
+    <i class="bi bi-search me-5"></i>
+  </div>
+      </div>
+    
+    </div>
+  </nav>
+
+
+<section class="hero-bakery">
+  <div class="hero-content">
+    <h1 class="display-4">Shop All Products</h1>
+    <p class="lead">Explore our range of coffees, pastries, and gift set</p>
+  </div>
+</section>
+
+ 
+  <div class="container py-5">
+    <div class="row">
+   
+      <aside class="col-md-3 mb-4">
+        <h5>Filter by</h5>
+        <div class="mb-3">
+          <label class="form-label">Category</label>
+          <select class="form-select">
+            <option>All</option>
+            <option>Coffee</option>
+            <option>Bakery</option>
+            <option>Merchandise</option>
+            <option>Subscription</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Sort by</label>
+          <select class="form-select">
+            <option>Popularity</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest</option>
+          </select>
+        </div>
+      </aside>
+
+    
+      <div class="col-md-9">
+        <div class="row g-4">
+          
+          <div class="col-sm-6 col-lg-4">
+            <div class="product-card p-3">
+              <img src="colum.jpg" class="w-100 mb-3" alt="Product Image">
+              <h5 class="fw-bold">Colombian Roast</h5>
+              <p class="text-muted">Smooth, balanced, medium roast</p>
+              <p class="fw-semibold">$12.99</p>
+              <button class="btn btn-sm btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+
+         
+          <div class="col-sm-6 col-lg-4">
+            <div class="product-card p-3">
+              <img src="alomond.jpg" class="w-100 mb-3" alt="Product Image">
+              <h5 class="fw-bold">Almond Croissant</h5>
+              <p class="text-muted">Fresh baked daily</p>
+              <p class="fw-semibold">$44.50</p>
+              <button class="btn btn-sm btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <div class="product-card p-3">
+              <img src="special.jpg" class="w-100 mb-3" alt="Product Image">
+              <h5 class="fw-bold">Special Dessert</h5>
+              <p class="text-muted">Fresh baked daily</p>
+              <p class="fw-semibold">$24.50</p>
+              <button class="btn btn-sm btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4">
+            <div class="product-card p-3">
+              <img src="collection.jpg" class="w-100 mb-3" alt="Product Image">
+              <h5 class="fw-bold">Coffee Collection</h5>
+              <p class="text-muted">Fresh baked daily</p>
+              <p class="fw-semibold">$14.50</p>
+              <button class="btn btn-sm btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+
+          
+          <div class="col-sm-6 col-lg-4">
+            <div class="product-card p-3">
+              <img src="paste.jpg" class="w-100 mb-3" alt="Product Image">
+              <h5 class="fw-bold">pastries</h5>
+              <p class="text-muted">Fresh baked daily</p>
+              <p class="fw-semibold">$4.50</p>
+              <button class="btn btn-sm btn-primary w-100">Add to Cart</button>
+            </div>
+          </div>
+
+          
+
+          <!-- Add more as needed -->
+        </div>
+
+        <!-- Add to Cart Section -->
+        <div class="mt-5">
+          <h4>Your Cart</h4>
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              Colombian Roast x1
+              <span class="badge bg-primary rounded-pill">$12.99</span>
+            </li>
+            <!-- Add more items dynamically -->
+          </ul>
+          <div class="text-end">
+            <button class="btn btn-success"><a href="./checkout.html">Proceed to Checkout</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>COFFEE</h3>
+    </div>
+
+    <div class="footer-column">
+      <h4>PRIVACY</h4>
+      <ul>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>SERVICES</h4>
+      <ul>
+        <li><a href="#">Subscriptions</a></li>
+        <li><a href="#">Online Ordering</a></li>
+        <li><a href="#">Delivery</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>ABOUT US</h4>
+      <ul>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Meet the Team</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>INFORMATION</h4>
+      <ul>
+        <li><a href="">Plans & Pricing</a></li>
+        <li><a href="#">Best-Selling Products</a></li>
+        <li><a href="#">Jobs</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column social-media">
+      <h4>SOCIAL MEDIA</h4>
+      <ul> 
+      <li><a href="#"><i class="fab fa-instagram">Instagram</i></a></li>
+      <li><a href=""><i class="fab fa-twitter">Tiktok</i></a></li>
+      <li><a href="#"><i class="fab fa-facebook">Facebook</i></a></li>
+     
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  
+  <script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+  integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+  crossorigin="anonymous"
+></script>
+</body>
+</html>
+
+</body>
+</html>

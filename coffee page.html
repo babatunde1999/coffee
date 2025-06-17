@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COFFEE</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f7f2eb;
+        color: #333;
+      }
+    
+      .hero {
+      background: url("./people1.jpg") no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      
+    }
+
+    .navbar {
+      background-color: white;
+    
+    }
+
+    .navbar-brand, .nav-link {
+      color: black;
+    
+    }
+
+    .navbar-nav{
+      gap: 5%;
+    }
+
+
+    .btn-coffee {
+      background-color: #6f4e37;
+      border: none;
+      padding: 10px 24px;
+    }
+
+      .filter-bar {
+            margin-top: 1rem 0;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            font-size: larger;
+            }
+        
+        .cup{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+        margin-top: 2rem ;
+        text-align: center;
+        
+      }
+      
+      h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 10px;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-content h3 {
+      margin: 0 0 10px;
+      font-size: 1.1rem;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      color: #555;
+      flex-grow: 1;
+    }
+
+    .card-footer {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .card-footer button {
+      background-color: #5e412f;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .card-footer button:hover {
+      background-color: #3e2b1f;
+    }
+        
+      .section {
+        padding: 4rem 2rem;
+      }
+
+      .behind {
+        margin-top: 2rem;
+        padding: 2rem;
+        padding-left: 2rem;
+        background-color: #fff;
+      }
+
+      .quiz{
+        background-color: #fff;
+        padding: 2rem;
+
+      }
+
+      
+     .btn {
+        background-color: #6f4e37;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+
+      
+    .footer {
+    background-color: #2c1c13;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: sans-serif;
+    margin-top: 50px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  .footer-column {
+    flex: 1 1 150px;
+    margin: 10px;
+  }
+
+  .footer-column h3,
+  .footer-column h4 {
+    margin-bottom: 10px;
+  }
+
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-column ul li {
+    margin: 5px 0;
+  }
+
+  .footer-column a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+
+  .footer-column a:hover {
+    color: #fff;
+  }
+
+  .social-media a {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+
+  .social-media a:hover {
+    color: #fff;
+  }
+
+
+  @media (max-width: 800px){
+    .cup{
+    flex-direction: column;
+}
+ .filter-bar{
+  flex-direction: column;
+ }
+
+  }
+
+
+
+    </style>
+</head>
+<body>
+ 
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">COFFEE</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon bg-light"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+              <li class="nav-item"><a class="nav-link" href="coffee page.html">COFFEE</a></li>
+              <li class="nav-item"><a class="nav-link" href="Bakery Page.html">BAKERY</a></li>
+              <li class="nav-item"><a class="nav-link" href="shop page.html">SHOP</a></li>
+              <li class="nav-item"><a class="nav-link" href="login page.html">LOGIN</a></li>
+            </ul>
+            </div  class="col-md-3 text-end">
+        <i class="bi bi-search me-5"></i>
+      </div>
+          </div>
+        
+        </div>
+      </nav>
+   
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container text-white">
+          <div class="hero-content">
+            <h1 class="display-4 fw-bold">Brewed for Every Moment</h1>
+            <p class="lead">Discover artisan blends, rich aromas, and your perfect cup of coffee.</p>
+            <a href="shop page.html" class="btn btn-coffee text-white mt-3">Explore our Coffee</a>
+          </div>
+        </div>
+      </section>
+
+    <section class="section filter-bar">
+        <label><b>Origin: </b></label>
+        <select>
+            <option>All</option>
+            <option>Colombia</option>
+            <option>Ethiopia</option>
+        </select>
+
+        <label><b>Roast:</b> </label>
+        <select>
+            <option>Light</option>
+            <option>Medium</option>
+            <option>Dark</option></select>
+      
+       <label><b>Taste notes:</b> </label>
+        <select>
+            <option>nutty</option>
+            <option>Fruity</option>
+            <option>Smoky</option></select>
+      </section>
+        </section>
+
+       <!-- <h2>☕ Coffee categories</h2>
+     <div class="cup">
+            <div class="cup1"><img src="onee.jpg" alt=""><br>Cold Coffee</div>
+            <div class="cup2"><img src="twoo.jpg" alt=""><br>Chilled Coffee</div>
+            <div class="cup3"><img src="threee.jpg" alt=""><br>Iced Coffee</div>
+            <div class="cup4"><img src="fourr.jpg" alt=""><br>Brewed Coffee</div>
+            <div class="cup4"><img src="six.jpg" alt=""><br>Espresso</div>
+            <div class="cup4"><img src="sixx.jpg" alt=""><br>Organic Beans</div>
+        </div>-->
+
+        <h2>☕ Coffee Collection</h2>
+        <div class="container">
+          <div class="card-container">
+            <div class="card">
+              <img src="lugo coffee.jpg" alt="Lungo Coffee">
+              <div class="card-content">
+                <h3>Lungo Coffee</h3>
+                <p>Rich, intense espresso with extra hot water.</p>
+                <div class="card-footer">
+                    $300
+                  <a href="checkout.html"><button>Order Now</button></a>
+                </div>
+              </div>
+            </div>
+        
+            <div class="card">
+              <img src="dalgona coffee.jpg" alt="Dalgona Coffee">
+              <div class="card-content">
+                <h3>Dalgona Coffee</h3>
+                <p>Whipped coffee over chilled milk.</p>
+                <div class="card-footer">
+                    $300
+                  <a href="checkout.html"><button>Order Now</button></a>
+                </div>
+              </div>
+            </div>
+        
+            <div class="card">
+              <img src="ice coffee.jpg" alt="Iced Coffee">
+              <div class="card-content">
+                <h3>Iced Coffee</h3>
+                <p>Chilled coffee with milk and syrup.</p>
+                <div class="card-footer">
+                    $300
+                  <a href="checkout.html"><button>Order Now</button></a>
+                </div>
+              </div>
+            </div>
+        
+            <div class="card">
+              <img src="filte coffee.jpg" alt="Filter Coffee">
+              <div class="card-content">
+                <h3>Filter Coffee</h3>
+                <p>Classic South Indian filter coffee.</p>
+                <div class="card-footer">
+                    $300
+                  <a href="checkout.html"><button>Order Now</button></a>
+                </div>
+              </div>
+            </div>
+        </div>
+  
+        <div class="card-container">
+          <div class="card">
+            <img src="espreso.jpg" alt="Espresso">
+            <div class="card-content">
+              <h3>Espresso</h3>
+              <p>A strong, concentrated coffee made by forcing hot water through 
+                finely-ground coffee beans.
+              </p>
+              <div class="card-footer">
+                  $300
+                <a href="checkout.html"><button>Order Now</button></a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card">
+            <img src="cappucico.jpg" alt="Cappuccino">
+            <div class="card-content">
+              <h3>Cappuccino</h3>
+              <p>A classic italian drink made with equal parts espresso, steamed milk,
+                and mils foam.</p>
+              <div class="card-footer">
+                  $300
+                <a href="checkout.html"><button>Order Now</button></a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card">
+            <img src="cold.jpg" alt="Cold Brew">
+            <div class="card-content">
+              <h3>Cold Brew</h3>
+              <p>Coffee brewed slowly in cold water over 12-24 hours, served chilled</p>
+              <div class="card-footer">
+                  $300
+                <a href="checkout.html"><button>Order Now</button></a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card">
+            <img src="mocha.jpg" alt="Mocha">
+            <div class="card-content">
+              <h3>Mocha</h3>
+              <p>A delecious combination of espresso, steamed milk, and chocolate syrup.</p>
+              <div class="card-footer">
+                  $300
+               <a href="checkout.html"><button>Order Now</button></a>
+              </div>
+            </div>
+          </div>
+      </div>
+  
+        </div>
+
+      
+        <h2>☕ Our Special Dessert</h2>
+       <div class="container">
+        <div class="card-container">
+          <div class="card">
+            <img src="gulab.jpg" alt="Gulab Jamun">
+            <div class="card-content">
+              <h3>Gulab Jamun</h3>
+              <p>Deep-fried dough balls soaked in syrup.</p>
+              <div class="card-footer">
+                  $300
+                <a href="checkout.html"><button>Order Now</button></a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card">
+            <img src="chocola.jpg" alt="Chocolate Tiramisu">
+            <div class="card-content">
+              <h3>Chocolate Tiramisu</h3>
+              <p>Layered dessert with cocoa and cream.</p>
+              <div class="card-footer">
+                  $300
+                <a href="checkout.html"><button>Order Now</button></a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card">
+            <img src="churos.jpg" alt="Churros">
+            <div class="card-content">
+              <h3>Churros</h3>
+              <p>Fried-dough pastries with cinnamon sugar.</p>
+              <div class="card-footer">
+                  $300
+                <a href="checkout.html"><button>Order Now</button></a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="card">
+            <img src="laminton.jpg" alt="Australian Lamingtons">
+            <div class="card-content">
+              <h3>Australian Lamingtons</h3>
+              <p>Chocolate-covered sponge cakes with coconut.</p>
+              <div class="card-footer">
+                  $300
+               <a href="checkout.html"><button>Order Now</button></a>>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card-container">
+            <div class="card">
+              <img src="baklava.jpg" alt="Baklava">
+              <div class="card-content">
+                <h3>Baklava</h3>
+                <p>Layered pastry made with file dough, chopped nuts, and sweet syrup or honey.</p>
+                <div class="card-footer">
+                    $300
+                <a href="checkout.html"><button>Order Now</button></a>
+                </div>
+              </div>
+            </div>
+        
+            <div class="card">
+              <img src="affogate.jpg" alt="Affogate">
+              <div class="card-content">
+                <h3>Affogate</h3>
+                <p>A scoop of vanilla galato or ice cream drowned in a shot of hot espresso.</p>
+                <div class="card-footer">
+                    $300
+                  <a href="checkout.html"><button>Order Now</button></a>
+                </div>
+              </div>
+            </div>
+        
+            <div class="card">
+              <img src="macaruns.jpg" alt="Macarons">
+              <div class="card-content">
+                <h3>Macarons</h3>
+                <p>Light, colorful almond meringue cookies with soft filling.</p>
+                <div class="card-footer">
+                    $300
+                 <a href="checkout.html"><button>Order Now</button></a>
+                </div>
+              </div>
+            </div>
+        
+            <div class="card">
+              <img src="baaque.jpg" alt="Basque Burnt Cheesecake">
+              <div class="card-content">
+                <h3>Basque Burnt Cheesecake</h3>
+                <p>Creamy, crustless cheesecake with a caramelized top and a rich, gooey center.</p>
+                <div class="card-footer">
+                    $300
+                  <a href="checkout.html"><button>Order Now</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+       </div>
+  
+
+    <h2>☕ Behind the Beans</h2>
+      <div class="container">
+        <section class="behind">
+          <p>Every great cup of coffee starts with a story.
+              At Coffee, we go beyond the brew. Our beans are handpicked from the 
+              finest farms across the globe, from the lush hills of Ethiopia to the highlands of Colombia.
+               We build direct relationships with farmers who share our passion for quality, sustainability, and ethical sourcing.
+              From harvesting to roasting, every step is crafted with care to bring out the unique flavor notes in each bean bold, rich, and unforgettable.
+              We roast in small batches to preserve freshness and flavor, ensuring your cup tells the story of where it came from.</p>
+              <a href="farms.html" class="btn btn-dark">Explore Our Farms</a>
+        </section>
+      </div>
+    
+      <section class="brewing" id="brewing-guide">
+        <div class="container">
+          <h2 class="text-center mb-5">☕ Brewing Guide</h2>
+          <div class="row g-4">
+
+
+            <div class="col-md-6 col-lg-3">
+              <div class="card h-100 shadow-sm">
+                <img src="french.jpg" class="card-img-top" alt="French Press" style="height: 350px;">
+                <div class="card-body">
+                  <h5 class="card-title">French Press</h5>
+                  <p class="card-text">Bold, rich, and full-bodied. Steep for 4 minutes using coarse grounds.</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-md-6 col-lg-3">
+              <div class="card h-100 shadow-sm">
+                <img src="pour.jpg" class="card-img-top" alt="Pour Over" style="height: 350px;">
+                <div class="card-body">
+                  <h5 class="card-title">Pour Over</h5>
+                  <p class="card-text">Clean, crisp, and balanced. Use medium grounds and pour in slow circles.</p>
+                </div>
+              </div>
+            </div>
+      
+        
+            <div class="col-md-6 col-lg-3">
+              <div class="card h-100 shadow-sm">
+                <img src="espress.jpg" class="card-img-top" alt="Espresso" style="height: 350px;">
+                <div class="card-body">
+                  <h5 class="card-title">Espresso</h5>
+                  <p class="card-text">Strong and concentrated. Brew in 25–30 seconds with fine grounds.</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-md-6 col-lg-3">
+              <div class="card h-100 shadow-sm">
+                <img src="cold brew.jpg" class="card-img-top" alt="Cold Brew" style="height: 350px;">
+                <div class="card-body">
+                  <h5 class="card-title">Cold Brew</h5>
+                  <p class="card-text">Smooth and refreshing. Steep for 12–24 hours with coarse grounds.</p>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+      
+          <!--<div class="text-center mt-5">
+            <a href="brew-videos.html" class="btn btn-dark px-4 py-2">Watch Brewing Tutorials</a>
+          </div>-->
+        </div>
+
+      </section>
+
+
+    <h2 class="mb-3">☕ Take the Quiz</h2>   
+ <div class="container">
+  <section class="quiz text-center" id="quiz">
+    <div class="container">
+     
+      <p class="lead mb-4">
+        Discover your perfect brew. It only takes 60 seconds!
+      </p>
+  
+      <ul class="list-unstyled d-flex flex-column flex-md-row justify-content-center gap-4 mb-4">
+        <li>🔍 Flavor discovery</li>
+        <li>💡 Personalized recommendations</li>
+        <li>⚡ Quick and fun!</li>
+      </ul>
+  
+      <a href="quiz.html" class="btn btn-light px-4 py-2 fw-bold">Start the Quiz</a>
+    </div>
+  </section>
+ </div>
+
+    
+<section class="text-dark" id="subscribe-save">
+    <div class="container text-center">
+      <h2 class="mb-3 fw-bold">☕ Subscribe & Save</h2>
+      <p class="mb-4">
+        Never run out of coffee again and save while you sip.  <br>
+        Choose your favorite blend, select your delivery schedule, and enjoy fresh coffee delivered to your doorstep.
+      </p>
+  
+      <div class="row justify-content-center g-4 mb-4">
+        <div class="col-12 col-md-3">
+          <div class="p-3 bg-white shadow-sm rounded h-100">
+            <i class="bi bi-percent fs-1 text-primary"></i>
+            <h5 class="mt-3">Save 15%</h5>
+            <p class="small text-muted">Enjoy automatic savings on every subscription.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="p-3 bg-white shadow-sm rounded h-100">
+            <i class="bi bi-truck fs-1 text-success"></i>
+            <h5 class="mt-3">Free Delivery</h5>
+            <p class="small text-muted">No shipping fees on recurring orders.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="p-3 bg-white shadow-sm rounded h-100">
+            <i class="bi bi-arrow-repeat fs-1 text-warning"></i>
+            <h5 class="mt-3">Flexible Plans</h5>
+            <p class="small text-muted">Pause, skip, or cancel anytime — no commitment.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-3">
+          <div class="p-3 bg-white shadow-sm rounded h-100">
+            <i class="bi bi-cup-hot fs-1 text-danger"></i>
+            <h5 class="mt-3">Fresh Roast</h5>
+            <p class="small text-muted">Delivered at peak freshness from our roastery.</p>
+          </div>
+        </div>
+      </div>
+  
+      <a href="subscribe.html" class="btn btn-dark px-4 py-2 fw-bold">
+        Start Your Subscription
+      </a>
+    </div>
+  </section>
+  
+  <section class="" id="faq">
+    <div class="container">
+      <h2 class="text-center mb-4">FAQs</h2>
+      <div class="accordion" id="accordionFAQ">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer1">
+              How fresh is your coffee?
+            </button>
+          </h2>
+          <div id="answer1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              Our coffee is roasted fresh and shipped within 48 hours to guarantee peak flavor and freshness.
+            </div>
+          </div>
+        </div>
+  
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer2">
+              Can I cancel my subscription anytime?
+            </button>
+          </h2>
+          <div id="answer2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body">
+              Yes! You can pause, skip, or cancel your subscription at any time through your account dashboard.
+            </div>
+          </div>
+        </div>
+  
+        <!-- Add more items as needed -->
+      </div>
+    </div>
+  </section>
+  
+    
+<footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>COFFEE</h3>
+      </div>
+  
+      <div class="footer-column">
+        <h4>PRIVACY</h4>
+        <ul>
+          <li><a href="#">Terms of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h4>SERVICES</h4>
+        <ul>
+          <li><a href="#">Subscriptions</a></li>
+          <li><a href="#">Online Ordering</a></li>
+          <li><a href="#">Delivery</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h4>ABOUT US</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Meet the Team</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-column">
+        <h4>INFORMATION</h4>
+        <ul>
+          <li><a href="">Plans & Pricing</a></li>
+          <li><a href="#">Best-Selling Products</a></li>
+          <li><a href="#">Jobs</a></li>
+        </ul>
+      </div>
+  
+       <div class="footer-column social-media">
+      <h4>SOCIAL MEDIA</h4>
+      <ul> 
+      <li><a href="#"><i class="fab fa-instagram">Instagram</i></a></li>
+      <li><a href=""><i class="fab fa-twitter">Tiktok</i></a></li>
+      <li><a href="#"><i class="fab fa-facebook">Facebook</i></a></li>
+     
+      </ul>
+    </div>
+    </div>
+  </footer>
+    </body>
+    </html>
+
+
+
+
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"
+      integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
